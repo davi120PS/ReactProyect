@@ -36,7 +36,11 @@ function NuevoAlumno(){
 
     const AgregarAlumno = e =>{
         e.preventDefault();
-        ClienteAxios.post('/alumnos', alumno).then(res=>{console.log(res);});
+        ClienteAxios.post('/alumnos', alumno).then(res=>{
+            alert("Alumno Guardado");
+            window.location.reload();
+            console.log(res);
+        });
     }
 
     const validarAlumno = ()=>{
