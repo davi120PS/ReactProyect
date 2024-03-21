@@ -6,6 +6,7 @@ import Calificaciones from './componentes/calificaciones/Calificaciones';
 import Carreras from './componentes/carreras/Carreras';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NuevoAlumno from './componentes/alumnos/NuevoAlumno';
+import EditarAlumno from './componentes/alumnos/EditarAlumno';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Alumnos />} />
               <Route path="/nuevo-alumno" element={<NuevoAlumno />} />
+              <Route path="/editaralumno/:id" element={<EditarAlumno />} />
               <Route path="/carreras" element={<Carreras />} />
               <Route path="/calificaciones" element={<Calificaciones />} />
             </Routes>

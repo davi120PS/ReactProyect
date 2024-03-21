@@ -34,18 +34,18 @@ function Alumnos() {
 
             <ul class="listado-alumnos">
                 {alumnos.map(alumno =>
-                    <li class="alumno">
+                    <li class="alumno" key={alumno.ID_Alumno}>
                         <div class="info-alumno">
-                            <p class="nombre">{alumno.Nombre}</p>
+                            <p class="nombre">{alumno.Nombre} {alumno.Apellido}</p>
                             <p class="carrera">{alumno.Carrera}</p>
                             <p>{alumno.Email}</p>
-                            <p>{alumno.Edad}</p>
+                            <p>Edad: {alumno.Edad}</p>
                         </div>
                         <div class="acciones">
-                            <a href="#" class="btn btn-azul">
+                            <Link to={"/editaralumno/" + alumno.ID_Alumno} class="btn btn-azul">
                                 <i class="fas fa-pen-alt"></i>
                                 Editar Alumno
-                            </a>
+                            </Link>
                             <button type="button" class="btn btn-rojo btn-eliminar" onClick={() => deleteAlumno(alumno.ID_Alumno)}>
                                 <i class="fas fa-times"></i>
                                 Eliminar Alumno
