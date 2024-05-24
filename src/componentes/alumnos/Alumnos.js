@@ -18,7 +18,7 @@ function Alumnos() {
     const deleteAlumno = async (id) => {
         try {
             const response = await ClienteAxios.delete('/alumnos/'+id+'');
-            alert("Alumno Eliminado");
+            alert("Alumno Eliminado"+response);
             window.location.reload();
         } catch (error) {
             console.error(error);
