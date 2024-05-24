@@ -43,8 +43,14 @@ function EditarAlumno(){
         ClienteAxios.post('/alumnos', alumno).then(res=>{
             alert("Alumno Modificado");
             window.location.reload();
-            console.log(res);
+            console.log(res);   
         });
+    }
+
+    const validarAlumno = ()=>{
+        const{carrera,nombre,apellido,edad,email,estado} = alumno;
+        let valido = !carrera.length || !nombre.length || !apellido.length || !edad.length || !email.length || !estado.length;
+        return valido;
     }
 
     return (
