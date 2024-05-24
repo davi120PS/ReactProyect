@@ -43,7 +43,7 @@ function EditarAlumno(){
         ClienteAxios.post('/alumnos', alumno).then(res=>{
             alert("Alumno Modificado");
             window.location.reload();
-            console.log(res);
+            console.log(res);   
         });
     }
 
@@ -55,7 +55,7 @@ function EditarAlumno(){
 
     return (
         <Fragment>
-        <h2>Nuevo Alumno</h2>
+        <h2>Editar Alumno</h2>
         
             <form onSubmit={(ModificarAlumno)}>
                 <legend>Llena todos los campos</legend>
@@ -95,9 +95,9 @@ function EditarAlumno(){
                     <label>Estado</label>
 
                     <select name="estado" onChange={actualizarState}>
-                        <option value="" selected={alumno.estado === 1}>Alumno Inscrito</option>
-                        <option value="1" selected={alumno.estado === 2}>Alumno Baja Temporal</option>
-                        <option value="0" selected={alumno.estado === 3}>Alumno Baja Definitiva</option>
+                        <option value="1" selected={alumno.estado === 1}>Alumno Inscrito</option>
+                        <option value="2" selected={alumno.estado === 2}>Alumno Baja Temporal</option>
+                        <option value="3" selected={alumno.estado === 3}>Alumno Baja Definitiva</option>
                     </select>
                 </div>
 
